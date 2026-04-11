@@ -1,0 +1,182 @@
+body {
+  background-color: rgb(35, 34, 41);
+  /* O fundo não rola junto com os cards */
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+  /* Garante que nada escape pela lateral */
+
+}
+
+h1 {
+  text-align: center;
+  /* Centraliza o texto do título */
+  width: 100%;
+  /* Garante que ele ocupe toda a largura para poder centralizar */
+  margin-top: 20px;
+  /* Adiciona um espaço opcional entre o logo e o título */
+  color: #f30000
+}
+
+
+.logo-topo {
+  width: 200px;
+  height: 50px;
+  /* Ajuste o tamanho do seu logo */
+
+}
+
+.navbar {
+
+  display: flex;
+  justify-content: space-between;
+  /* Manda o logo pra um lado e menu pro outro */
+  align-items: center;
+  /* Alinha os dois no meio da altura da barra */
+  padding: 10px 5%;
+  background-color: rgba(0, 0, 0, 0.945);
+  /* Ou a cor que você preferir */
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+  /* Espaço entre os links */
+  font-size: 20px;
+}
+
+.navbar img {
+  height: 30px;
+  width: 120px;
+  margin-left: 80px;
+  /* Ajuste o tamanho do logo conforme necessário */
+}
+
+.inicio {
+  background-image: url(../imagens/f1_banner_carro_redbull.png);
+  background-size: cover;
+  background-position: right bottom;
+  min-height: 60vh;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  padding: 20px 5px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  /* Centraliza ambos horizontalmente */
+  border-top: 1px solid #ff0000;
+  border-bottom: 1px solid #ff0000;
+
+}
+
+
+.inicio_text {
+  max-width: 750px;
+  /* O texto fica centralizado em um bloco legível */
+  padding: 0 20px;
+  /* Evita que o texto encoste nas bordas em telas pequenas */
+  line-height: 1.5;
+  border-left: 4px solid #e10600;
+}
+
+.citacao {
+  font-style: italic;
+  font-size: 27px;
+  line-height: 1.2;
+  margin-top: 60px;
+  margin-bottom: -10px;
+  border-radius: 12px;
+  color: #f1f1f1;
+
+}
+
+.senna {
+  font-size: 19px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+
+.mini-titulo {
+  background-image: url('../imagens/linha_de_chegada.png');
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 90px;
+  /* Ajuste a altura conforme preferir */
+  padding: 30px 40px;
+  margin-top: 20px;
+}
+
+.mini-titulo h2 {
+  font-family: 'Russo One', sans-serif;
+  text-transform: uppercase;
+  /* Sempre em maiúsculas */
+  transform: scaleX(1.2);
+  /* Isso "estica" a fonte para os lados */
+  display: inline-block;
+  /* Necessário para o transform funcionar */
+  color: #ff0000;
+  display: block;
+  margin: 0;
+  text-align: center;
+  font-size: 25px;
+  /* Remove a margem padrão do h2 */
+}
+
+.card-lista {
+  display: flex;
+  /* Ativa o modo "lado a lado" */
+  flex-wrap: wrap;
+  /* Permite que os itens quebrem para a próxima linha */
+  justify-content: center;
+  /* Centraliza os itens horizontalmente */
+  gap: 15px;
+  /* Espaçamento entre os itens */
+  list-style: none;
+  /* Tira as bolinhas da lista */
+  padding: 0;
+  padding-left: 0;
+}
+
+.card-lista li {
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+  border: 1px solid #02006e88;
+  width: 90%;
+  max-width: 450px;
+  /* Impede que o card fique largo demais */
+  margin-bottom: 20px 10px;
+  padding: 15px;
+  border-radius: 12px;
+  /* Cantos arredondados modernos */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+  list-style: none;
+}
+
+
+li .Foto-piloto {
+  width: 100%;
+  /* A imagem vai ocupar toda a largura interna do card */
+  height: auto;
+  /* Mantém a proporção da foto */
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #ff0000;
+  /* Vermelho oficial da F1 */
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #ff3333;
+  /* Um vermelho um pouco mais claro */
+}
