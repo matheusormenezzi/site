@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(35, 34, 41);
+  background-color: #1a1a1d;
+  ;
   /* O fundo não rola junto com os cards */
   margin: 0;
   background-repeat: no-repeat;
@@ -16,41 +17,41 @@ h1 {
   /* Garante que ele ocupe toda a largura para poder centralizar */
   margin-top: 20px;
   /* Adiciona um espaço opcional entre o logo e o título */
-  color: #f30000
-}
-
-
-.logo-topo {
-  width: 200px;
-  height: 50px;
-  /* Ajuste o tamanho do seu logo */
-
+  color: #D10500;
 }
 
 .navbar {
-
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
-  justify-content: space-between;
   /* Manda o logo pra um lado e menu pro outro */
   align-items: center;
   /* Alinha os dois no meio da altura da barra */
   padding: 10px 5%;
-  background-color: rgba(0, 0, 0, 0.945);
+  background-color: #0D0D0D;
   /* Ou a cor que você preferir */
+  height: 60px;
+  border-bottom: 1px solid #D10500;
 }
 
 .nav-links {
+  position: absolute;
+  left: 25%;
   display: flex;
   list-style: none;
-  gap: 50px;
-  /* Espaço entre os links */
-  font-size: 20px;
+  gap: 110%;
+  font-size: 17px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: 'Russo One', sans-serif;
 }
+
 
 .navbar img {
   height: 30px;
   width: 120px;
-  margin-left: 80px;
+  margin-left: 0px;
   /* Ajuste o tamanho do logo conforme necessário */
 }
 
@@ -58,19 +59,17 @@ h1 {
   background-image: url(../imagens/f1_banner_carro_redbull.png);
   background-size: cover;
   background-position: right bottom;
-  min-height: 60vh;
+  min-height: 75vh;
   font-size: 18px;
   color: rgb(255, 255, 255);
-  padding: 20px 5px;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: left;
   /* Centraliza ambos horizontalmente */
-  border-top: 1px solid #ff0000;
-  border-bottom: 1px solid #ff0000;
-
+  border-bottom: 1px solid #D10500;
+  justify-content: center;
 }
 
 
@@ -80,7 +79,7 @@ h1 {
   padding: 0 20px;
   /* Evita que o texto encoste nas bordas em telas pequenas */
   line-height: 1.5;
-  border-left: 4px solid #e10600;
+  border-left: 4px solid #D10500;
 }
 
 .citacao {
@@ -102,29 +101,49 @@ h1 {
 
 
 .mini-titulo {
-  background-image: url('../imagens/linha_de_chegada.png');
-  background-size: contain;
-  background-repeat: repeat-x;
-  height: 90px;
-  /* Ajuste a altura conforme preferir */
+  position: relative;
+  /* Isso faz a imagem ficar presa aqui dentro */
+  background-color: #0D0D0D;
   padding: 30px 40px;
   margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.bandeira-mini-titulo {
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.01;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .mini-titulo h2 {
+  position: relative; 
+  z-index: 2; /* Fica acima da imagem (que é z-index 1) */
   font-family: 'Russo One', sans-serif;
   text-transform: uppercase;
   /* Sempre em maiúsculas */
   transform: scaleX(1.2);
   /* Isso "estica" a fonte para os lados */
-  display: inline-block;
-  /* Necessário para o transform funcionar */
-  color: #ff0000;
+  color: #ffffff;
   display: block;
   margin: 0;
   text-align: center;
   font-size: 25px;
-  /* Remove a margem padrão do h2 */
+  letter-spacing: 5px;
+  text-shadow: 2px 2px 0px rgba(255, 0, 0, 0.616);
+}
+
+
+.linha-chegada {
+  width: 100%;
+  height: 4px;
+  background-color: #D10500;
+  /* De vermelho para um vermelho mais escuro */
+  margin-top: 10px;
 }
 
 .card-lista {
@@ -144,39 +163,65 @@ h1 {
 
 .card-lista li {
   color: rgba(255, 255, 255, 0.87);
-  background-color: #000000;
-  border: 1px solid #02006e88;
+  background-color: #0D0D0D;
+  border: 1px solid #090085ec;
   width: 90%;
   max-width: 450px;
   /* Impede que o card fique largo demais */
-  margin-bottom: 20px 10px;
+  margin-bottom: 20px;
   padding: 15px;
   border-radius: 12px;
   /* Cantos arredondados modernos */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  /* Sombra suave */
   list-style: none;
+}
+
+.card-lista li ul li {
+  margin-top: 10px;
+  /* Dá um espaço entre o texto e a lista interna */
+  padding-left: 20px;
+  /* Indenta a lista interna para ficar mais organizada */
+  border: none;
+  border-bottom: 1px solid #090085ec;
 }
 
 
 li .Foto-piloto {
   width: 100%;
   /* A imagem vai ocupar toda a largura interna do card */
-  height: auto;
+  height: 300px;
   /* Mantém a proporção da foto */
+  object-fit: cover;
+  /* Corta a imagem sem distorcer para preencher o espaço */
   border-radius: 8px;
   margin-top: 20px;
 }
 
 a {
   text-decoration: none;
-  color: #ff0000;
+  color: #D10500;
   /* Vermelho oficial da F1 */
   font-weight: bold;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #ff3333;
+  color: #8B0000;
   /* Um vermelho um pouco mais claro */
+}
+
+footer {
+  background-color: #0D0D0D;
+  color: #d3d3d3;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  border-top: 1px solid #D10500;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 80px;
 }

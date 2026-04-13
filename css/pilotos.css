@@ -1,0 +1,196 @@
+body {
+    background-color: #1a1a1d;
+    ;
+    /* O fundo não rola junto com os cards */
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    /* Garante que nada escape pela lateral */
+
+}
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+    /* Centraliza o texto do título */
+    width: 100%;
+    /* Garante que ele ocupe toda a largura para poder centralizar */
+    margin-top: 20px;
+    /* Adiciona um espaço opcional entre o logo e o título */
+    color: #d3d3d3;
+    text-shadow: 2px 2px 4px #2f00ffce;
+}
+
+h2 {
+    font-size: 35px;
+    text-align: center;
+    color: #d3d3d3;
+    margin-top: 50px;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+    color: #d3d3d3;
+    margin-top: 30px;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    /* Manda o logo pra um lado e menu pro outro */
+    align-items: center;
+    /* Alinha os dois no meio da altura da barra */
+    padding: 10px 5%;
+    background-color: #0D0D0D;
+    /* Ou a cor que você preferir */
+    height: 60px;
+    border-bottom: 1px solid #1f00d1;
+}
+
+.nav-links {
+    position: absolute;
+    left: 25%;
+    display: flex;
+    list-style: none;
+    gap: 110%;
+    font-size: 17px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+}
+
+
+.navbar img {
+    height: 30px;
+    width: 120px;
+    margin-left: 0px;
+    /* Ajuste o tamanho do logo conforme necessário */
+}
+
+a {
+    text-decoration: none;
+    color: #D10500;
+    /* Vermelho oficial da F1 */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #8B0000;
+    /* Um vermelho um pouco mais claro */
+}
+
+p {
+    font-size: 25px;
+    color: #FFFFFF;
+    /* Branco para contraste */
+    max-width: 800px;
+    /* Limita a largura do texto para melhor leitura */
+    margin: 20px auto;
+    /* Centraliza o parágrafo e adiciona espaçamento vertical */
+    padding: 0 20px;
+    /* Evita que o texto encoste nas bordas em telas pequenas */
+    line-height: 1.5;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #121212;
+}
+
+th {
+    background-color: #B70400;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    text-align: center;
+    color: #AFAFAF;
+}
+
+tr:nth-child(even) {
+    background-color: #1a1a1a;
+    /* Efeito zebrado */
+}
+
+.biografia-card {
+    background: #1a1a1a;
+    /* Um cinza bem escuro para destacar do fundo */
+    border-left: 4px solid #1200b7;
+    border-top: 4px solid #1200b7;
+    /* Linha de "sangue" da F1 */
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 800px;
+    /* Mantém o texto centralizado e fácil de ler */
+    box-shadow: 15px 15px 20px rgba(230, 255, 4, 0.774);
+    border-radius: 0 8px 8px 0;
+    /* Arredonda só o lado direito */
+}
+
+.biografia {
+
+    display: flex;
+    /* Coloca os itens lado a lado */
+    align-items: flex-start;
+    /* Alinha o texto pelo topo da imagem */
+    gap: 30px;
+    /* Dá um espaço entre a imagem e o texto */
+    margin-bottom: 50px;
+    /* Espaço entre uma época e outra */
+    padding: 20px;
+
+}
+
+.biografia h3 {
+    color: #fff;
+    font-family: 'Russo One', sans-serif;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.biografia p {
+    align-items: center;
+    display: flex;
+    color: #ccc;
+    /* Cinza claro é melhor que branco puro para leitura longa */
+    line-height: 1.6;
+    font-size: 22px;
+    text-align: justify;
+    flex: 1;
+}
+
+.biografia-card li {
+    list-style: none;
+    display: block;
+    margin-bottom: 10px;
+    color: #bed2fc;
+    line-height: 1.5;
+    font-size: 19px;
+}
+
+.biografia img {
+    display: block;
+    width: 50%;
+    border-radius: 9px;
+    margin: 20px 0;
+    border: 1px solid #333;
+}
