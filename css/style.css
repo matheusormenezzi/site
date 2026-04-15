@@ -1,22 +1,16 @@
 body {
   background-color: #1a1a1d;
-  ;
-  /* O fundo não rola junto com os cards */
   margin: 0;
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
-  /* Garante que nada escape pela lateral */
 
 }
 
 h1 {
   text-align: center;
-  /* Centraliza o texto do título */
   width: 100%;
-  /* Garante que ele ocupe toda a largura para poder centralizar */
   margin-top: 20px;
-  /* Adiciona um espaço opcional entre o logo e o título */
   color: #D10500;
 }
 
@@ -25,12 +19,10 @@ h1 {
   top: 0;
   z-index: 1000;
   display: flex;
-  /* Manda o logo pra um lado e menu pro outro */
   align-items: center;
-  /* Alinha os dois no meio da altura da barra */
+
   padding: 10px 5%;
   background-color: #0D0D0D;
-  /* Ou a cor que você preferir */
   height: 60px;
   border-bottom: 1px solid #D10500;
 }
@@ -52,7 +44,6 @@ h1 {
   height: 30px;
   width: 120px;
   margin-left: 0px;
-  /* Ajuste o tamanho do logo conforme necessário */
 }
 
 .inicio {
@@ -67,7 +58,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   text-align: left;
-  /* Centraliza ambos horizontalmente */
+
   border-bottom: 1px solid #D10500;
   justify-content: center;
 }
@@ -75,9 +66,7 @@ h1 {
 
 .inicio_text {
   max-width: 750px;
-  /* O texto fica centralizado em um bloco legível */
   padding: 0 20px;
-  /* Evita que o texto encoste nas bordas em telas pequenas */
   line-height: 1.5;
   border-left: 4px solid #D10500;
 }
@@ -102,7 +91,6 @@ h1 {
 
 .mini-titulo {
   position: relative;
-  /* Isso faz a imagem ficar presa aqui dentro */
   background-color: #0D0D0D;
   padding: 30px 40px;
   margin-top: 20px;
@@ -122,12 +110,10 @@ h1 {
 
 .mini-titulo h2 {
   position: relative; 
-  z-index: 2; /* Fica acima da imagem (que é z-index 1) */
+  z-index: 2;
   font-family: 'Russo One', sans-serif;
   text-transform: uppercase;
-  /* Sempre em maiúsculas */
   transform: scaleX(1.2);
-  /* Isso "estica" a fonte para os lados */
   color: #ffffff;
   display: block;
   margin: 0;
@@ -142,21 +128,15 @@ h1 {
   width: 100%;
   height: 4px;
   background-color: #D10500;
-  /* De vermelho para um vermelho mais escuro */
   margin-top: 10px;
 }
 
 .card-lista {
   display: flex;
-  /* Ativa o modo "lado a lado" */
   flex-wrap: wrap;
-  /* Permite que os itens quebrem para a próxima linha */
   justify-content: center;
-  /* Centraliza os itens horizontalmente */
   gap: 15px;
-  /* Espaçamento entre os itens */
   list-style: none;
-  /* Tira as bolinhas da lista */
   padding: 0;
   padding-left: 0;
 }
@@ -167,19 +147,15 @@ h1 {
   border: 1px solid #090085ec;
   width: 90%;
   max-width: 450px;
-  /* Impede que o card fique largo demais */
   margin-bottom: 20px;
   padding: 15px;
   border-radius: 12px;
-  /* Cantos arredondados modernos */
   list-style: none;
 }
 
 .card-lista li ul li {
   margin-top: 10px;
-  /* Dá um espaço entre o texto e a lista interna */
   padding-left: 20px;
-  /* Indenta a lista interna para ficar mais organizada */
   border: none;
   border-bottom: 1px solid #090085ec;
 }
@@ -187,11 +163,8 @@ h1 {
 
 li .Foto-piloto {
   width: 100%;
-  /* A imagem vai ocupar toda a largura interna do card */
   height: 300px;
-  /* Mantém a proporção da foto */
   object-fit: cover;
-  /* Corta a imagem sem distorcer para preencher o espaço */
   border-radius: 8px;
   margin-top: 20px;
 }
@@ -199,14 +172,12 @@ li .Foto-piloto {
 a {
   text-decoration: none;
   color: #D10500;
-  /* Vermelho oficial da F1 */
   font-weight: bold;
 }
 
 a:hover {
   text-decoration: underline;
   color: #8B0000;
-  /* Um vermelho um pouco mais claro */
 }
 
 footer {

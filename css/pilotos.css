@@ -1,25 +1,23 @@
 body {
     background-color: #1a1a1d;
-    ;
-    /* O fundo não rola junto com os cards */
     margin: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
     overflow-x: hidden;
-    /* Garante que nada escape pela lateral */
 
+}
+
+:root {
+    --cor-primaria: #005fb7;
+    --cor-detalhe: #1200b7;
+    --cor-sombra: rgba(230, 255, 4, 0.77);
 }
 
 h1 {
     font-size: 45px;
     text-align: center;
-    /* Centraliza o texto do título */
     width: 100%;
-    /* Garante que ele ocupe toda a largura para poder centralizar */
     margin-top: 20px;
-    /* Adiciona um espaço opcional entre o logo e o título */
     color: #d3d3d3;
-    text-shadow: 2px 2px 4px #2f00ffce;
+    text-shadow: 2px 2px 4px var(--cor-detalhe);
 }
 
 h2 {
@@ -48,14 +46,11 @@ img {
     top: 0;
     z-index: 1000;
     display: flex;
-    /* Manda o logo pra um lado e menu pro outro */
     align-items: center;
-    /* Alinha os dois no meio da altura da barra */
     padding: 10px 5%;
     background-color: #0D0D0D;
-    /* Ou a cor que você preferir */
     height: 60px;
-    border-bottom: 1px solid #1f00d1;
+    border-bottom: 1px solid var(--cor-detalhe);
 }
 
 .nav-links {
@@ -75,108 +70,62 @@ img {
     height: 30px;
     width: 120px;
     margin-left: 0px;
-    /* Ajuste o tamanho do logo conforme necessário */
 }
 
 a {
     text-decoration: none;
     color: #D10500;
-    /* Vermelho oficial da F1 */
     font-weight: bold;
 }
 
 a:hover {
     text-decoration: underline;
     color: #8B0000;
-    /* Um vermelho um pouco mais claro */
 }
 
 p {
     font-size: 25px;
     color: #FFFFFF;
-    /* Branco para contraste */
     max-width: 800px;
-    /* Limita a largura do texto para melhor leitura */
     margin: 20px auto;
-    /* Centraliza o parágrafo e adiciona espaçamento vertical */
     padding: 0 20px;
-    /* Evita que o texto encoste nas bordas em telas pequenas */
     line-height: 1.5;
 }
 
-table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-    background: #121212;
-}
-
-th {
-    background-color: #B70400;
-    color: white;
-    padding: 12px;
-}
-
-td {
-    padding: 10px;
-    border-bottom: 1px solid #333;
-    text-align: center;
-    color: #AFAFAF;
-}
-
-tr:nth-child(even) {
-    background-color: #1a1a1a;
-    /* Efeito zebrado */
-}
 
 .biografia-card {
     background: #1a1a1a;
-    /* Um cinza bem escuro para destacar do fundo */
-    border-left: 4px solid #1200b7;
-    border-top: 4px solid #1200b7;
-    /* Linha de "sangue" da F1 */
+    border-left: 3px solid var(--cor-detalhe);
+    border-top: 3px solid var(--cor-detalhe);
+    border-bottom: 3px solid var(--cor-sombra);
+    border-right: 3px solid var(--cor-sombra);
     padding: 25px;
     margin: 30px auto;
     max-width: 800px;
-    /* Mantém o texto centralizado e fácil de ler */
-    box-shadow: 15px 15px 20px rgba(230, 255, 4, 0.774);
-    border-radius: 0 8px 8px 0;
-    /* Arredonda só o lado direito */
+    box-shadow: 0 0 10px #000000;
+    border-radius: 8px 8px 8px 8px;
+    text-align: center;
 }
 
-.biografia {
 
-    display: flex;
-    /* Coloca os itens lado a lado */
-    align-items: flex-start;
-    /* Alinha o texto pelo topo da imagem */
-    gap: 30px;
-    /* Dá um espaço entre a imagem e o texto */
-    margin-bottom: 50px;
-    /* Espaço entre uma época e outra */
-    padding: 20px;
-
+.biografia-card h2, 
+.biografia-card h3 {
+    text-align: center;
+    display: block;
+    width: 100%;
 }
 
-.biografia h3 {
-    color: #fff;
-    font-family: 'Russo One', sans-serif;
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 
-.biografia p {
-    align-items: center;
-    display: flex;
+
+.biografia-card p,
+.biografia-card ul {
     color: #ccc;
-    /* Cinza claro é melhor que branco puro para leitura longa */
     line-height: 1.6;
     font-size: 22px;
-    text-align: justify;
+    text-align: left;
     flex: 1;
 }
+
 
 .biografia-card li {
     list-style: none;
@@ -187,10 +136,164 @@ tr:nth-child(even) {
     font-size: 19px;
 }
 
-.biografia img {
+.biografia-card img {
     display: block;
-    width: 50%;
+    width: 80%;
     border-radius: 9px;
-    margin: 20px 0;
+    margin: 0 auto;
+    border: 1px solid var(--cor-detalhe);
+}
+
+
+.piloto_estatisticas {
+    width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #121212;
     border: 1px solid #333;
+    border-radius: 8px;
+    border-spacing: 0;
+    margin: 40px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+    box-shadow: 10px 10px 10px var(--cor-primaria);
+}
+
+
+.piloto_estatisticas th {
+    background-color: var(--cor-detalhe);
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.piloto_estatisticas td {
+    text-align: center;
+    padding: 25px 10px;
+    font-size: 20px;
+    font-family: 'Russo One', sans-serif;
+    color: #fff;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+
+}
+
+
+.piloto_estatisticas img {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    border-radius: 0px;
+
+}
+
+.piloto_estatisticas h2{
+    text-align: center;
+    width: 100%;
+    text-shadow: 2px 2px 4px var(--cor-primaria);
+    font-size: 45px;
+    
+}
+
+.linha{
+    width: 80%;
+    height: 4px;
+    background-color: var(--cor-primaria);
+    margin: 0 auto 40px auto;
+}
+
+
+.secao-final {
+    display: flex;
+    background: #141414;
+    border: 2px solid var(--cor-primaria);
+    border-radius: 15px;
+    padding: 40px;
+    margin: 30px auto;
+    max-width: 1000px;
+    text-align: center;
+    list-style: none;
+}
+
+
+.card-final {
+    background: #1a1a1a;
+    justify-content: center;
+    border-top: 5px solid var(--cor-primaria);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card-final ul {
+    padding: 30px;
+    margin: 20px 0;
+    list-style: none;
+}
+
+.card-final p {
+    text-align: left;
+    font-size: 24px;
+    line-height: 1.6;
+}
+
+.card-final h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+.card-final img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-final li {
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 21px;
+    list-style: none;
+    color: var(--cor-primaria);
+}
+
+.voltar {
+    display: block;
+    font-size: 18px;
+    width: 100%;
+    color: var(--cor-primaria);
+    text-align: center;
+    margin: 40px auto;
+}
+
+
+.mini_card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    background: #111;
+    padding: 20px;
+    border-radius: 15px;
+    border-left: 5px solid var(--cor-primaria);
+}
+
+.mini_card_texto {
+    flex: 1;
+    text-align: left;
+}
+
+.mini_card img {
+    width: 300px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
 }
