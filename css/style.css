@@ -20,30 +20,31 @@ h1 {
   z-index: 1000;
   display: flex;
   align-items: center;
-
   padding: 10px 5%;
   background-color: #0D0D0D;
   height: 60px;
   border-bottom: 1px solid #D10500;
+  justify-content: space-between;
 }
 
 .nav-links {
   position: absolute;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   list-style: none;
-  gap: 110%;
-  font-size: 17px;
-  letter-spacing: 5px;
+  gap: 200px;
+  font-size: 20px;
+  letter-spacing: 2px;
   text-transform: uppercase;
   font-family: 'Russo One', sans-serif;
 }
 
 
+
 .navbar img {
   height: 30px;
-  width: 120px;
-  margin-left: 0px;
+  width: auto;
 }
 
 .inicio {
@@ -109,7 +110,7 @@ h1 {
 }
 
 .mini-titulo h2 {
-  position: relative; 
+  position: relative;
   z-index: 2;
   font-family: 'Russo One', sans-serif;
   text-transform: uppercase;
@@ -194,5 +195,89 @@ html {
 }
 
 section {
-    scroll-margin-top: 80px;
+  scroll-margin-top: 80px;
+}
+
+.contato-container {
+    padding: 50px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.contato-card {
+    width: 100%;
+    max-width: 600px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+    border: 2px solid var(--cor-detalhe);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.contato-card h2 {
+    font-family: 'Russo One', sans-serif;
+    color: #fff;
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.contato-card p {
+    font-size: 16px;
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+.campo-grupo {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-grupo label {
+    font-family: 'Russo One', sans-serif;
+    color: var(--cor-primaria);
+    margin-bottom: 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.campo-grupo input, 
+.campo-grupo select, 
+.campo-grupo textarea {
+    background-color: #222;
+    border: 1px solid #444;
+    border-radius: 8px;
+    padding: 12px;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.campo-grupo input:focus, 
+.campo-grupo textarea:focus {
+    border-color: var(--cor-primaria);
+}
+
+.botao-enviar {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--cor-detalhe);
+    color: #fff;
+    font-family: 'Russo One', sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.botao-enviar:hover {
+    background-color: var(--cor-primaria);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
