@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+    </style>
+    <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os Melhores Pilotos</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="../index.html"><img src="/Site/imagens/logo_f1.png" class="logo-topo"></a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#pilotos">Pilotos</a></li>
+            <li><a href="../index.html#rivalidades">Rivalidades</a></li>
+            <li><a href="FaleConosco.html">Contato</a></li>
+        </ul>
+        <img src="/Site/imagens/capacete_senna.jpg" alt="capacete senna">
+    </nav>
+
+    <section class="contato-container">
+        <div class="contato-card">
+            <h2>🏎️ Pit Stop: Fale Conosco</h2>
+            <p>Tem alguma sugestão de piloto ou rivalidade? Mande sua mensagem para a nossa equipe de box!</p>
+
+            <form action="#" method="POST" class="formulario-contato">
+                <div class="campo-grupo">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Ayrton Senna da Silva" required>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="assunto">Assunto</label>
+                    <select id="assunto" name="assunto">
+                        <option value="sugestao">Sugestão de Conteúdo</option>
+                        <option value="erro">Relatar Erro no Site</option>
+                        <option value="parceria">Parcerias</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui sua mensagem..."
+                        required></textarea>
+                </div>
+
+                <button type="submit" class="botao-enviar">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+</body>
+
+</html>
