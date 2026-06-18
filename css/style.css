@@ -4,7 +4,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: hidden;
-
+  font-family: Arial, sans-serif;
 }
 
 h1 {
@@ -33,14 +33,14 @@ h1 {
   transform: translateX(-50%);
   display: flex;
   list-style: none;
-  gap: 200px;
-  font-size: 20px;
+  gap: 40px;
+  font-size: 18px;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-family: 'Russo One', sans-serif;
+  margin: 0;
+  padding: 0;
 }
-
-
 
 .navbar img {
   height: 30px;
@@ -50,7 +50,7 @@ h1 {
 .inicio {
   background-image: url(../imagens/f1_banner_carro_redbull.png);
   background-size: cover;
-  background-position: right bottom;
+  background-position: center;
   min-height: 75vh;
   font-size: 18px;
   color: rgb(255, 255, 255);
@@ -59,9 +59,9 @@ h1 {
   flex-direction: column;
   align-items: center;
   text-align: left;
-
   border-bottom: 1px solid #D10500;
   justify-content: center;
+  padding: 20px;
 }
 
 
@@ -74,26 +74,24 @@ h1 {
 
 .citacao {
   font-style: italic;
-  font-size: 27px;
+  font-size: 24px;
   line-height: 1.2;
-  margin-top: 60px;
+  margin-top: 40px;
   margin-bottom: -10px;
-  border-radius: 12px;
   color: #f1f1f1;
-
+  text-align: center;
 }
 
 .senna {
-  font-size: 19px;
+  font-size: 18px;
   font-weight: bold;
   margin-top: 15px;
 }
 
-
 .mini-titulo {
   position: relative;
   background-color: #0D0D0D;
-  padding: 30px 40px;
+  padding: 30px 20px;
   margin-top: 20px;
   margin-bottom: 40px;
 }
@@ -114,14 +112,12 @@ h1 {
   z-index: 2;
   font-family: 'Russo One', sans-serif;
   text-transform: uppercase;
-  transform: scaleX(1.2);
   color: #ffffff;
-  display: block;
   margin: 0;
   text-align: center;
-  font-size: 25px;
-  letter-spacing: 5px;
-  text-shadow: 2px 2px 0px rgba(255, 0, 0, 0.616);
+  font-size: 22px;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 0px rgba(255, 0, 0, 0.6);
 }
 
 
@@ -129,29 +125,28 @@ h1 {
   width: 100%;
   height: 4px;
   background-color: #D10500;
-  margin-top: 10px;
+  margin-top: 15px;
 }
 
 .card-lista {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
   list-style: none;
-  padding: 0;
-  padding-left: 0;
+  padding: 0 20px;
+  margin-bottom: 40px;
 }
 
 .card-lista li {
   color: rgba(255, 255, 255, 0.87);
   background-color: #0D0D0D;
   border: 1px solid #090085ec;
-  width: 90%;
-  max-width: 450px;
-  margin-bottom: 20px;
-  padding: 15px;
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
   border-radius: 12px;
-  list-style: none;
+  box-sizing: border-box;
 }
 
 .card-lista li ul li {
@@ -164,11 +159,12 @@ h1 {
 
 li .Foto-piloto {
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
   border-radius: 8px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
+
 
 a {
   text-decoration: none;
@@ -185,7 +181,7 @@ footer {
   background-color: #0D0D0D;
   color: #d3d3d3;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
   font-size: 14px;
   border-top: 1px solid #D10500;
 }
@@ -199,85 +195,169 @@ section {
 }
 
 .contato-container {
-    padding: 50px 5%;
-    display: flex;
-    justify-content: center;
+  padding: 50px 5%;
+  display: flex;
+  justify-content: center;
 }
 
 .contato-card {
-    width: 100%;
-    max-width: 600px;
-    background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
-    border: 2px solid var(--cor-detalhe);
-    border-radius: 15px;
-    padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+  width: 100%;
+  max-width: 600px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 2px solid var(--cor-detalhe);
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
 }
 
 .contato-card h2 {
-    font-family: 'Russo One', sans-serif;
-    color: #fff;
-    font-size: 32px;
-    margin-bottom: 10px;
-    text-align: center;
-    text-transform: uppercase;
+  font-family: 'Russo One', sans-serif;
+  color: #fff;
+  font-size: 32px;
+  margin-bottom: 10px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .contato-card p {
-    font-size: 16px;
-    text-align: center;
-    color: #ccc;
-    margin-bottom: 30px;
+  font-size: 16px;
+  text-align: center;
+  color: #ccc;
+  margin-bottom: 30px;
 }
 
 .campo-grupo {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .campo-grupo label {
-    font-family: 'Russo One', sans-serif;
-    color: var(--cor-primaria);
-    margin-bottom: 8px;
-    font-size: 14px;
-    text-transform: uppercase;
+  font-family: 'Russo One', sans-serif;
+  color: var(--cor-primaria);
+  margin-bottom: 8px;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
-.campo-grupo input, 
-.campo-grupo select, 
+.campo-grupo input,
+.campo-grupo select,
 .campo-grupo textarea {
-    background-color: #222;
-    border: 1px solid #444;
-    border-radius: 8px;
-    padding: 12px;
-    color: #fff;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s ease;
+  background-color: #222;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
 }
 
-.campo-grupo input:focus, 
+.campo-grupo input:focus,
 .campo-grupo textarea:focus {
-    border-color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
 }
 
 .botao-enviar {
-    width: 100%;
-    padding: 15px;
-    background-color: var(--cor-detalhe);
-    color: #fff;
-    font-family: 'Russo One', sans-serif;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: transform 0.2s, background-color 0.3s;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--cor-detalhe);
+  color: #fff;
+  font-family: 'Russo One', sans-serif;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: transform 0.2s, background-color 0.3s;
 }
 
 .botao-enviar:hover {
-    background-color: var(--cor-primaria);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  background-color: var(--cor-primaria);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ==========================================================================
+   MENU HAMBÚRGUER & MOBILE RESPONSIVO
+   ========================================================================== */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 1100;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.bar {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+  border-radius: 2px;
+}
+
+/* Telas de Tablets e Smartphones (Até 768px) */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    /* Exibe o botão hamburguer no mobile */
+  }
+
+  .nav-links {
+    position: fixed;
+    left: -100%;
+    /* Escondido fora da tela por padrão */
+    top: 61px;
+    transform: none;
+    flex-direction: column;
+    background-color: #0D0D0D;
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    text-align: center;
+    gap: 25px;
+    border-bottom: 2px solid #D10500;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  }
+
+  .nav-links.active {
+    left: 0;
+    transition: left 0.4s ease-in-out;
+    /* Desliza o menu para dentro da tela */
+  }
+
+  .navbar>img:not(.logo-topo) {
+    display: none;
+    /* Remove elementos pesados do topo no mobile */
+  }
+
+  /* Transformação do Hambúrguer em "X" */
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    background-color: #D10500;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: #D10500;
+  }
+
+  /* Ajustes extras de tamanho para mobile */
+  .inicio h1 {
+    font-size: 24px;
+  }
+
+  .inicio_text {
+    font-size: 15px;
+  }
+
+  .citacao {
+    font-size: 18px;
+  }
 }
