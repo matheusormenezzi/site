@@ -45,7 +45,7 @@ h1 {
     transform: translateX(-50%);
     display: flex;
     list-style: none;
-    gap: 300px;
+    gap: 50px;
     font-size: 20px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -81,16 +81,16 @@ p {
 
 .rivalidade-card {
     max-width: 70%;
-   background: linear-gradient(135deg, 
-        var(--cor-gradiente-1, #222222) 0%, 
-        #1a1a1a 50%, 
-        var(--cor-gradiente-2, #603085) 100%);
+    background: linear-gradient(135deg,
+            var(--cor-gradiente-1, #222222) 0%,
+            #1a1a1a 50%,
+            var(--cor-gradiente-2, #603085) 100%);
     border: 2px solid var(--cor-detalhe);
     border-radius: 15px;
     padding: 30px;
     margin: 0 auto;
     margin-bottom: 40px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .corrida-card {
@@ -115,7 +115,7 @@ p {
     width: 100%;
     border-radius: 15px;
     border: 2px solid var(--cor-detalhe);
-    box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease;
 }
 
@@ -155,3 +155,71 @@ p {
     margin: 40px auto;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1100;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bar {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    border-radius: 2px;
+}
+
+@media (max-width: 900px) {
+
+    .hamburger {
+        display: flex;
+        /* Exibe o botão hamburguer no mobile */
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        /* Escondido fora da tela por padrão */
+        top: 61px;
+        transform: none;
+        flex-direction: column;
+        background-color: #0D0D0D;
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+        text-align: center;
+        gap: 25px;
+        border-bottom: 2px solid #D10500;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .nav-links.active {
+        left: 0;
+        transition: left 0.4s ease-in-out;
+        /* Desliza o menu para dentro da tela */
+    }
+
+    .navbar>img:not(.logo-topo) {
+        display: none;
+        /* Remove elementos pesados do topo no mobile */
+    }
+
+    /* Transformação do Hambúrguer em "X" */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+        background-color: #D10500;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+        background-color: #D10500;
+    }
+
+}
